@@ -1,0 +1,800 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>DisTestSutSettingsPageUi</class>
+ <widget class="QWidget" name="DisTestSutSettingsPageUi">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>831</width>
+    <height>507</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Form</string>
+  </property>
+  <layout class="QHBoxLayout" name="horizontalLayout" stretch="7,6">
+   <item>
+    <widget class="view::ts::SutView" name="_sutRenderView"/>
+   </item>
+   <item>
+    <widget class="QScrollArea" name="_sutSettingsScrollArea">
+     <property name="widgetResizable">
+      <bool>true</bool>
+     </property>
+     <widget class="QWidget" name="_settingContentsWidget">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>0</y>
+        <width>356</width>
+        <height>524</height>
+       </rect>
+      </property>
+      <layout class="QVBoxLayout" name="verticalLayout_2">
+       <item>
+        <widget class="QGroupBox" name="_compGroup">
+         <property name="minimumSize">
+          <size>
+           <width>324</width>
+           <height>221</height>
+          </size>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>324</width>
+           <height>221</height>
+          </size>
+         </property>
+         <property name="title">
+          <string>Components</string>
+         </property>
+         <widget class="QGroupBox" name="_compBoxGroup">
+          <property name="geometry">
+           <rect>
+            <x>10</x>
+            <y>120</y>
+            <width>128</width>
+            <height>71</height>
+           </rect>
+          </property>
+          <property name="title">
+           <string>Box</string>
+          </property>
+          <widget class="QWidget" name="layoutWidget1">
+           <property name="geometry">
+            <rect>
+             <x>10</x>
+             <y>20</y>
+             <width>134</width>
+             <height>55</height>
+            </rect>
+           </property>
+           <layout class="QVBoxLayout" name="_compBoxVerticalLayout">
+            <item>
+             <layout class="QHBoxLayout" name="_compBoxHorizontalLayout">
+              <item>
+               <widget class="QSpinBox" name="_compBoxWSpinBox">
+                <property name="minimum">
+                 <number>16</number>
+                </property>
+                <property name="maximum">
+                 <number>256</number>
+                </property>
+                <property name="value">
+                 <number>100</number>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QLabel" name="_compBoxSizeLabel">
+                <property name="text">
+                 <string>x</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QSpinBox" name="_compBoxHSpinBox">
+                <property name="minimum">
+                 <number>16</number>
+                </property>
+                <property name="maximum">
+                 <number>256</number>
+                </property>
+                <property name="value">
+                 <number>75</number>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </item>
+            <item>
+             <widget class="ClickableLabel" name="_compBoxSelectedColor">
+              <property name="minimumSize">
+               <size>
+                <width>106</width>
+                <height>0</height>
+               </size>
+              </property>
+              <property name="maximumSize">
+               <size>
+                <width>106</width>
+                <height>16777215</height>
+               </size>
+              </property>
+              <property name="frameShape">
+               <enum>QFrame::Box</enum>
+              </property>
+              <property name="text">
+               <string/>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </widget>
+         </widget>
+         <widget class="QGroupBox" name="_compBorderGroup">
+          <property name="geometry">
+           <rect>
+            <x>173</x>
+            <y>120</y>
+            <width>128</width>
+            <height>71</height>
+           </rect>
+          </property>
+          <property name="title">
+           <string>Border</string>
+          </property>
+          <widget class="QWidget" name="layoutWidget2">
+           <property name="geometry">
+            <rect>
+             <x>10</x>
+             <y>20</y>
+             <width>108</width>
+             <height>55</height>
+            </rect>
+           </property>
+           <layout class="QVBoxLayout" name="_compBorderVerticalLayout">
+            <item>
+             <layout class="QHBoxLayout" name="_compBorderHorizontalLayout">
+              <item>
+               <widget class="QSpinBox" name="_compBorderWidthSpinBox">
+                <property name="minimumSize">
+                 <size>
+                  <width>40</width>
+                  <height>0</height>
+                 </size>
+                </property>
+                <property name="minimum">
+                 <number>1</number>
+                </property>
+                <property name="maximum">
+                 <number>10</number>
+                </property>
+                <property name="value">
+                 <number>3</number>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <spacer name="_compBorderWidthHorizontalSpacer">
+                <property name="orientation">
+                 <enum>Qt::Horizontal</enum>
+                </property>
+                <property name="sizeHint" stdset="0">
+                 <size>
+                  <width>40</width>
+                  <height>20</height>
+                 </size>
+                </property>
+               </spacer>
+              </item>
+             </layout>
+            </item>
+            <item>
+             <widget class="ClickableLabel" name="_compBorderSelectedColor">
+              <property name="minimumSize">
+               <size>
+                <width>106</width>
+                <height>0</height>
+               </size>
+              </property>
+              <property name="maximumSize">
+               <size>
+                <width>106</width>
+                <height>16777215</height>
+               </size>
+              </property>
+              <property name="frameShape">
+               <enum>QFrame::Box</enum>
+              </property>
+              <property name="text">
+               <string/>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </widget>
+         </widget>
+         <widget class="QGroupBox" name="_compTextFontGroup">
+          <property name="geometry">
+           <rect>
+            <x>10</x>
+            <y>20</y>
+            <width>301</width>
+            <height>91</height>
+           </rect>
+          </property>
+          <property name="title">
+           <string>Text</string>
+          </property>
+          <widget class="QWidget" name="layoutWidget3">
+           <property name="geometry">
+            <rect>
+             <x>11</x>
+             <y>23</y>
+             <width>296</width>
+             <height>67</height>
+            </rect>
+           </property>
+           <layout class="QVBoxLayout" name="_compTextFontVerticalLayout">
+            <item>
+             <layout class="QHBoxLayout" name="_compTextFontNameAndSizeHorizontalLayout">
+              <item>
+               <widget class="QFontComboBox" name="_compTextFontComboBox">
+                <property name="sizePolicy">
+                 <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+                  <horstretch>0</horstretch>
+                  <verstretch>0</verstretch>
+                 </sizepolicy>
+                </property>
+                <property name="editable">
+                 <bool>false</bool>
+                </property>
+                <property name="currentFont">
+                 <font>
+                  <family>DejaVu Sans</family>
+                 </font>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <layout class="QHBoxLayout" name="_compTexFontSizeHorizontalLayout">
+                <item>
+                 <widget class="QSpinBox" name="_compTextFontSizeSpinBox">
+                  <property name="sizePolicy">
+                   <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+                    <horstretch>0</horstretch>
+                    <verstretch>0</verstretch>
+                   </sizepolicy>
+                  </property>
+                  <property name="minimumSize">
+                   <size>
+                    <width>40</width>
+                    <height>0</height>
+                   </size>
+                  </property>
+                  <property name="minimum">
+                   <number>6</number>
+                  </property>
+                  <property name="maximum">
+                   <number>72</number>
+                  </property>
+                  <property name="value">
+                   <number>8</number>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QLabel" name="_compTextFontSizeUnitLabel">
+                  <property name="text">
+                   <string>px</string>
+                  </property>
+                 </widget>
+                </item>
+               </layout>
+              </item>
+             </layout>
+            </item>
+            <item>
+             <layout class="QHBoxLayout" name="_compTextFontCharsHorizontalLayout">
+              <item>
+               <widget class="QCheckBox" name="_compTextFontBoldCheckBox">
+                <property name="text">
+                 <string>Bold</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QCheckBox" name="_compTextFontItalicCheckBox">
+                <property name="text">
+                 <string>Italic</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="ClickableLabel" name="_compTextSelectedColor">
+                <property name="minimumSize">
+                 <size>
+                  <width>50</width>
+                  <height>0</height>
+                 </size>
+                </property>
+                <property name="frameShape">
+                 <enum>QFrame::Box</enum>
+                </property>
+                <property name="text">
+                 <string/>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </item>
+           </layout>
+          </widget>
+         </widget>
+        </widget>
+       </item>
+       <item>
+        <widget class="QGroupBox" name="_portGroup">
+         <property name="minimumSize">
+          <size>
+           <width>324</width>
+           <height>111</height>
+          </size>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>324</width>
+           <height>111</height>
+          </size>
+         </property>
+         <property name="title">
+          <string>Ports</string>
+         </property>
+         <widget class="QGroupBox" name="_portBorderGroup">
+          <property name="geometry">
+           <rect>
+            <x>173</x>
+            <y>20</y>
+            <width>128</width>
+            <height>71</height>
+           </rect>
+          </property>
+          <property name="title">
+           <string>Border</string>
+          </property>
+          <widget class="QWidget" name="layoutWidget_2">
+           <property name="geometry">
+            <rect>
+             <x>10</x>
+             <y>20</y>
+             <width>108</width>
+             <height>55</height>
+            </rect>
+           </property>
+           <layout class="QVBoxLayout" name="_portBorderVerticalLayout">
+            <item>
+             <layout class="QHBoxLayout" name="_portBorderHorizontalLayout">
+              <item>
+               <widget class="QSpinBox" name="_portBorderWidthSpinBox">
+                <property name="minimumSize">
+                 <size>
+                  <width>40</width>
+                  <height>0</height>
+                 </size>
+                </property>
+                <property name="minimum">
+                 <number>1</number>
+                </property>
+                <property name="maximum">
+                 <number>10</number>
+                </property>
+                <property name="value">
+                 <number>3</number>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <spacer name="_portBorderWidthHorizontalSpacer">
+                <property name="orientation">
+                 <enum>Qt::Horizontal</enum>
+                </property>
+                <property name="sizeHint" stdset="0">
+                 <size>
+                  <width>40</width>
+                  <height>20</height>
+                 </size>
+                </property>
+               </spacer>
+              </item>
+             </layout>
+            </item>
+            <item>
+             <widget class="ClickableLabel" name="_portBorderSelectedColor">
+              <property name="minimumSize">
+               <size>
+                <width>106</width>
+                <height>0</height>
+               </size>
+              </property>
+              <property name="maximumSize">
+               <size>
+                <width>106</width>
+                <height>16777215</height>
+               </size>
+              </property>
+              <property name="frameShape">
+               <enum>QFrame::Box</enum>
+              </property>
+              <property name="text">
+               <string/>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </widget>
+         </widget>
+         <widget class="QGroupBox" name="_portBoxGroup">
+          <property name="geometry">
+           <rect>
+            <x>10</x>
+            <y>20</y>
+            <width>128</width>
+            <height>71</height>
+           </rect>
+          </property>
+          <property name="title">
+           <string>Box</string>
+          </property>
+          <widget class="QWidget" name="layoutWidget_3">
+           <property name="geometry">
+            <rect>
+             <x>10</x>
+             <y>20</y>
+             <width>134</width>
+             <height>55</height>
+            </rect>
+           </property>
+           <layout class="QVBoxLayout" name="_portBoxVerticalLayout">
+            <item>
+             <layout class="QHBoxLayout" name="_portBoxHorizontalLayout">
+              <item>
+               <widget class="QSpinBox" name="_portBoxWSpinBox">
+                <property name="minimum">
+                 <number>4</number>
+                </property>
+                <property name="maximum">
+                 <number>128</number>
+                </property>
+                <property name="value">
+                 <number>15</number>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QLabel" name="_portBoxSizeLabel">
+                <property name="text">
+                 <string>x</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QSpinBox" name="_portBoxHSpinBox">
+                <property name="minimum">
+                 <number>4</number>
+                </property>
+                <property name="maximum">
+                 <number>128</number>
+                </property>
+                <property name="value">
+                 <number>15</number>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </item>
+            <item>
+             <widget class="ClickableLabel" name="_portBoxSelectedColor">
+              <property name="minimumSize">
+               <size>
+                <width>106</width>
+                <height>0</height>
+               </size>
+              </property>
+              <property name="maximumSize">
+               <size>
+                <width>106</width>
+                <height>16777215</height>
+               </size>
+              </property>
+              <property name="frameShape">
+               <enum>QFrame::Box</enum>
+              </property>
+              <property name="text">
+               <string/>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </widget>
+         </widget>
+        </widget>
+       </item>
+       <item>
+        <widget class="QGroupBox" name="_linkGroup">
+         <property name="minimumSize">
+          <size>
+           <width>324</width>
+           <height>64</height>
+          </size>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>324</width>
+           <height>64</height>
+          </size>
+         </property>
+         <property name="title">
+          <string>Links</string>
+         </property>
+         <widget class="QWidget" name="layoutWidget4">
+          <property name="geometry">
+           <rect>
+            <x>20</x>
+            <y>20</y>
+            <width>289</width>
+            <height>31</height>
+           </rect>
+          </property>
+          <layout class="QHBoxLayout" name="_linkLineHorizontalLayout">
+           <property name="spacing">
+            <number>14</number>
+           </property>
+           <item>
+            <layout class="QHBoxLayout" name="_linkLineWidthHorizontalLayout">
+             <property name="rightMargin">
+              <number>20</number>
+             </property>
+             <item>
+              <widget class="QLabel" name="_linkLineWidthLabel">
+               <property name="text">
+                <string>Line Width : </string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QSpinBox" name="_linkLineWidthSpinBox">
+               <property name="minimumSize">
+                <size>
+                 <width>40</width>
+                 <height>0</height>
+                </size>
+               </property>
+               <property name="minimum">
+                <number>1</number>
+               </property>
+               <property name="maximum">
+                <number>10</number>
+               </property>
+               <property name="value">
+                <number>3</number>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </item>
+           <item>
+            <layout class="QHBoxLayout" name="_linkLineColorHorizontalLayout">
+             <item>
+              <widget class="QLabel" name="_linkLineColorLabel">
+               <property name="text">
+                <string>Line Color : </string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="ClickableLabel" name="_linkLineSelectedColor">
+               <property name="minimumSize">
+                <size>
+                 <width>50</width>
+                 <height>0</height>
+                </size>
+               </property>
+               <property name="frameShape">
+                <enum>QFrame::Box</enum>
+               </property>
+               <property name="text">
+                <string/>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </item>
+          </layout>
+         </widget>
+        </widget>
+       </item>
+       <item>
+        <widget class="QGroupBox" name="_sutBoxGroup">
+         <property name="minimumSize">
+          <size>
+           <width>324</width>
+           <height>92</height>
+          </size>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>324</width>
+           <height>92</height>
+          </size>
+         </property>
+         <property name="title">
+          <string>SUT Box</string>
+         </property>
+         <widget class="QWidget" name="layoutWidget5">
+          <property name="geometry">
+           <rect>
+            <x>20</x>
+            <y>20</y>
+            <width>336</width>
+            <height>66</height>
+           </rect>
+          </property>
+          <layout class="QGridLayout" name="_sutBoxGridLayout">
+           <item row="0" column="0">
+            <layout class="QHBoxLayout" name="_sutBoxColorHorizontalLayout">
+             <property name="rightMargin">
+              <number>15</number>
+             </property>
+             <item>
+              <widget class="QLabel" name="_sutBoxColorLabel">
+               <property name="text">
+                <string>Box Color :</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="ClickableLabel" name="_sutBoxSelectedColor">
+               <property name="minimumSize">
+                <size>
+                 <width>50</width>
+                 <height>0</height>
+                </size>
+               </property>
+               <property name="frameShape">
+                <enum>QFrame::Box</enum>
+               </property>
+               <property name="text">
+                <string/>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </item>
+           <item row="0" column="1">
+            <layout class="QHBoxLayout" name="_sutBoxCompMarginHorizontalLayout">
+             <item>
+              <widget class="QLabel" name="_sutBoxCompMarginLabel">
+               <property name="text">
+                <string>Component Margin : </string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QSpinBox" name="_sutBoxCompMarginSpinBox">
+               <property name="minimum">
+                <number>1</number>
+               </property>
+               <property name="maximum">
+                <number>200</number>
+               </property>
+               <property name="value">
+                <number>50</number>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </item>
+           <item row="1" column="0">
+            <layout class="QHBoxLayout" name="_sutBoxMarginHorizontalLayout">
+             <property name="rightMargin">
+              <number>15</number>
+             </property>
+             <item>
+              <widget class="QLabel" name="_sutBoxMarginLabel">
+               <property name="text">
+                <string>Margin : </string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QSpinBox" name="_sutBoxMarginSpinBox">
+               <property name="minimum">
+                <number>1</number>
+               </property>
+               <property name="maximum">
+                <number>200</number>
+               </property>
+               <property name="value">
+                <number>25</number>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <spacer name="_sutBoxMarginHorizontalSpacer">
+               <property name="orientation">
+                <enum>Qt::Horizontal</enum>
+               </property>
+               <property name="sizeHint" stdset="0">
+                <size>
+                 <width>40</width>
+                 <height>20</height>
+                </size>
+               </property>
+              </spacer>
+             </item>
+            </layout>
+           </item>
+           <item row="1" column="1">
+            <layout class="QHBoxLayout" name="_sutBoxRadiusHorizontalLayout">
+             <item>
+              <widget class="QLabel" name="_sutBoxRadiusLabel">
+               <property name="text">
+                <string>Radius : </string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QSpinBox" name="_sutBoxRadiusSpinBox">
+               <property name="minimum">
+                <number>1</number>
+               </property>
+               <property name="maximum">
+                <number>100</number>
+               </property>
+               <property name="value">
+                <number>15</number>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <spacer name="_sutBoxRadiusHorizontalSpacer">
+               <property name="orientation">
+                <enum>Qt::Horizontal</enum>
+               </property>
+               <property name="sizeHint" stdset="0">
+                <size>
+                 <width>40</width>
+                 <height>20</height>
+                </size>
+               </property>
+              </spacer>
+             </item>
+            </layout>
+           </item>
+          </layout>
+         </widget>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>ClickableLabel</class>
+   <extends>QLabel</extends>
+   <header>clickablelabel.hpp</header>
+  </customwidget>
+  <customwidget>
+   <class>view::ts::SutView</class>
+   <extends>QGraphicsView</extends>
+   <header location="global">mobatawidgets/ts/sutview.hpp</header>
+  </customwidget>
+ </customwidgets>
+ <resources/>
+ <connections/>
+</ui>

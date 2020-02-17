@@ -1,0 +1,10 @@
+<RCC>
+    <qresource prefix="/specsim">
+        <file>images/specsim_mode.png</file>
+        <file>specsim.mimetypes.xml</file>
+        <file>images/Simulator.png</file>
+        <file>template_decl.decl</file>
+        <file>template_spenat.spenat</file>
+        <file>template_statemachine.statemachine</file>
+    </qresource>
+</RCC>

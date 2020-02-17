@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+
+<mime-info xmlns='http://www.freedesktop.org/standards/shared-mime-info'>
+  <mime-type type="application/specsimproject">
+    <sub-class-of type="text/plain"/>
+    <comment>Model Simulation Project File</comment>
+    <glob pattern="*.specsimproject"/>
+  </mime-type>
+  <mime-type type="application/simsystem">
+      <sub-class-of type="text/plain"/>
+      <comment>simsystem declaration</comment>
+      <glob pattern="*.simsystem"/>
+  </mime-type>
+  <mime-type type="application/simsystemgraphic">
+      <sub-class-of type="text/plain"/>
+      <comment>simsystem graphical specification</comment>
+      <glob pattern="*.simsystemgraphic"/>
+  </mime-type>
+</mime-info>

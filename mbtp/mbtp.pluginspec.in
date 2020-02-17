@@ -1,0 +1,10 @@
+<plugin name=\"mbtp\" version=\"$$MBTP_VERSION\" compatVersion=\"$$MBTP_VERSION\">
+    <vendor>ifak</vendor>
+    <copyright>(C) ifak</copyright>
+    <license>LGPL</license>
+    <description>administration of mbtp-projects</description>
+    <url></url>
+    <dependencyList>
+		<dependency name=\"projectexplorer\" version=\"$$PROJECTEXPLORER_VERSION\"/>
+    </dependencyList>
+</plugin>

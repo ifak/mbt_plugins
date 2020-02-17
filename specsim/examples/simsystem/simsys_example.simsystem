@@ -1,0 +1,11 @@
+import <spenat_example.spenat> as spenat
+import <statemachine_example.statemachine> as machine
+SimSystem{
+  name: mySimSystem;
+  Connection{
+    machine.defaultPort <-> spenat.defaultPort;
+  }
+  Config{
+   StartSequence: machine, spenat;
+  }
+}

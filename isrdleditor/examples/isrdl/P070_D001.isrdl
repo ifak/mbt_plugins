@@ -1,0 +1,11 @@
+SecurityRequirement {
+    name : P070_D002;
+    AttackDescription {
+        source : Internet;
+        privileges : None;
+    }
+    ImpactThreat {
+        confidentiality : Broken;
+    }
+}
+

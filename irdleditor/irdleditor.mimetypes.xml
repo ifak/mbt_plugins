@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<mime-info xmlns='http://www.freedesktop.org/standards/shared-mime-info'>
+    <mime-type type="application/irdl">
+        <sub-class-of type="text/plain"/>
+        <comment>irdl declaration</comment>
+        <glob pattern="*.irdl"/>
+    </mime-type>
+    <mime-type type="application/irdlDecl">
+        <sub-class-of type="text/plain"/>
+        <comment>irdlDecl declaration</comment>
+        <glob pattern="*.irdldecl"/>
+    </mime-type>
+    <mime-type type="application/irdlgraphic">
+        <sub-class-of type="text/plain"/>
+        <comment>irdl graphical specification</comment>
+        <glob pattern="*.irdlgraphic"/>
+    </mime-type>
+</mime-info>

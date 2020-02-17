@@ -1,0 +1,3 @@
+*.pro.user
+/commondeclgraphicwidget_old.cpp
+/commondeclgraphicwidget_old.hpp

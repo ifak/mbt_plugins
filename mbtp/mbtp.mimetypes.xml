@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+
+<mime-info xmlns='http://www.freedesktop.org/standards/shared-mime-info'>
+  <mime-type type="application/mbtpproject">
+    <sub-class-of type="text/plain"/>
+    <comment>Mbtp Project File</comment>
+    <glob pattern="*.mbtp"/>
+  </mime-type>
+  <mime-type type="application/attributeseditor">
+    <sub-class-of type="text/plain"/>
+    <comment>spenat graphical specification</comment>
+    <glob pattern="*.attributes"/>
+  </mime-type>
+</mime-info>

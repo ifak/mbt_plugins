@@ -1,0 +1,13 @@
+<plugin name=\"specsim\" version=\"$$SPECSIM_VERSION\" compatVersion=\"$$SPECSIM_VERSION\">
+  <vendor>ifak</vendor>
+  <copyright>(C) ifak</copyright>
+  <license>LGPL</license>
+  <description>simulation of specifications models</description>
+  <url></url>
+  <dependencyList>
+    <dependency name=\"projectexplorer\" version=\"$$PROJECTEXPLORER_VERSION\"/>
+    <dependency name=\"spenateditor\" version=\"$$SPENATEDITOR_VERSION\"/>
+    <dependency name=\"statemachineeditor\" version=\"$$STATEMACHINEEDITOR_VERSION\"/>
+    <dependency name=\"testcaseeditor\" version=\"$$TESTCASEEDITOR_VERSION\"/>
+  </dependencyList>
+</plugin>

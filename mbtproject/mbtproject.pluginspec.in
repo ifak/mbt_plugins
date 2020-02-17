@@ -1,0 +1,13 @@
+<plugin name=\"mbtproject\" version=\"$$MBTPROJECT_VERSION\" compatVersion=\"$$MBTPROJECT_VERSION\">
+  <vendor>ifak</vendor>
+  <copyright>(C) ifak</copyright>
+  <license>LGPL</license>
+  <description>administration of mbtproject-projects</description>
+  <url></url>
+  <dependencyList>
+    <dependency name=\"projectexplorer\" version=\"$$PROJECTEXPLORER_VERSION\"/>
+    <dependency name=\"spenateditor\" version=\"$$SPENATEDITOR_VERSION\"/>
+    <dependency name=\"statemachineeditor\" version=\"$$STATEMACHINEEDITOR_VERSION\"/>
+    <dependency name=\"testcaseeditor\" version=\"$$TESTCASEEDITOR_VERSION\"/>
+  </dependencyList>
+</plugin>

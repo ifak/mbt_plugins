@@ -1,0 +1,5 @@
+<RCC>
+    <qresource prefix="/commondecleditor">
+        <file>commondecleditor.mimetypes.xml</file>
+    </qresource>
+</RCC>

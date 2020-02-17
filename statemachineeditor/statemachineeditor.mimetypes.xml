@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<mime-info xmlns='http://www.freedesktop.org/standards/shared-mime-info'>
+    <mime-type type="application/statemachine">
+        <sub-class-of type="text/plain"/>
+        <comment>statemachine declaration</comment>
+        <glob pattern="*.statemachine"/>
+    </mime-type>
+    <mime-type type="application/statemachinegraphic">
+        <sub-class-of type="text/plain"/>
+        <comment>statemachine graphical specification</comment>
+        <glob pattern="*.statemachinegraphic"/>
+    </mime-type>
+</mime-info>

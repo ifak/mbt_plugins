@@ -1,0 +1,13 @@
+SecurityRequirement {
+    name : myIsrdl;
+    AttackDescription {
+        source : Internet;
+        privileges : None;
+    }
+    ImpactThreat {
+        confidentiality : Intact;
+        integrity : NoDamage;
+        timeout : 3600 s;
+    }
+}
+

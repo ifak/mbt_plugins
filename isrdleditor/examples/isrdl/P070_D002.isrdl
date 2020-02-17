@@ -1,0 +1,10 @@
+SecurityRequirement {
+    name : P070_D002;
+    AttackDescription {
+        privileges : None;
+    }
+    ImpactThreat {
+        timeout : 200 ms;
+    }
+}
+

@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+
+<mime-info xmlns='http://www.freedesktop.org/standards/shared-mime-info'>
+  <mime-type type="application/mbtproject">
+    <sub-class-of type="text/plain"/>
+    <comment>MBT Project File</comment>
+    <glob pattern="*.mbtproject"/>
+  </mime-type>
+</mime-info>

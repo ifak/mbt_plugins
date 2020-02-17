@@ -1,0 +1,3 @@
+*.pro.user
+/irdlgraphicwidget_old.cpp
+/irdlgraphicwidget_old.hpp

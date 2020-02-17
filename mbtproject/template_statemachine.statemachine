@@ -1,0 +1,84 @@
+//import <$${ProjectName}.decl> as decl
+
+StateMachine{
+  name: $${NewStateMachineName};
+
+  Attribute int myAttr_1 = 0;
+
+  Signal start();
+
+  Signal input(int x);
+  Signal output(int y);
+
+  Port in_port;
+  Port out_port;
+
+  SimpleState{
+    name: init;
+  }
+
+  CompositeState{
+    name: active;
+
+    SimpleState{
+      name: s1;
+    }
+
+    SimpleState{
+      name: s2;
+    }
+
+    initState: s1;
+  }
+
+  initState: init;
+
+  SignalTransition{
+    name: t1;
+
+    signal: start;
+    port: in_port;
+
+    action: send output(this.myAttr_1) to out_port;
+
+    source: init;
+    target: active;
+  }
+
+  SignalTransition{
+    name: t2;
+
+    signal: input;
+    port: in_port;
+
+    guard: msg.x < 10;
+
+    action:{
+      this.myAttr_1=msg.x;
+      send output(this.myAttr_1) to out_port;
+    }
+
+    source: active.s1;
+    target: active.s2;
+  }
+
+  SignalTransition{
+    name: t3;
+
+    signal: input;
+    port: in_port;
+
+    guard:{
+      this.myAttr_1>5
+      and msg.x<8
+    }
+
+    action:{
+      this.myAttr_1=msg.x;
+      send output(this.myAttr_1) to out_port;
+    }
+
+    source: active.s2;
+    target: active.s1;
+  }
+}

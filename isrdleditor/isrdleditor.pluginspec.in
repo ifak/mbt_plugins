@@ -1,0 +1,11 @@
+<plugin name=\"isrdleditor\" version=\"$$ISRDLEDITOR_VERSION\" compatVersion=\"$$ISRDLEDITOR_VERSION\">
+  <vendor>ifak</vendor>
+  <copyright>(C) ifak </copyright>
+  <license>LGPL</license>
+  <description>isrdl editor plugin</description>
+  <url></url>
+  <dependencyList>
+    <dependency name=\"dsleditor\" version=\"$$DSLEDITOR_VERSION\"/>
+  </dependencyList>
+</plugin>
+

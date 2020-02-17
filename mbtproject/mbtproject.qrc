@@ -1,0 +1,11 @@
+<RCC>
+    <qresource prefix="/mbtproject">
+        <file>mbtproject.mimetypes.xml</file>
+        <file>template_decl.decl</file>
+        <file>template_spenat.spenat</file>
+        <file>template_statemachine.statemachine</file>
+        <file>images/tcgcoverage_check.png</file>
+        <file>images/tcgcoverage_question.png</file>
+        <file>images/mbt_mode.png</file>
+    </qresource>
+</RCC>

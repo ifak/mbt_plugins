@@ -1,0 +1,11 @@
+SecurityRequirement {
+    name: SecReq;
+    AttackDescription{
+        source: Internet;
+        privileges: None;
+    }
+    ImpactThreat{
+        confidentiality: Broken;
+    }
+}
+

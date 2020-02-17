@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<mime-info xmlns='http://www.freedesktop.org/standards/shared-mime-info'>
+    <mime-type type="application/spenat">
+        <sub-class-of type="text/plain"/>
+        <comment>spenat declaration</comment>
+        <glob pattern="*.spenat"/>
+    </mime-type>
+    <mime-type type="application/spenatgraphic">
+        <sub-class-of type="text/plain"/>
+        <comment>spenat graphical specification</comment>
+        <glob pattern="*.spenatgraphic"/>
+    </mime-type>
+</mime-info>

@@ -1,0 +1,11 @@
+<plugin name=\"statemachineeditor\" version=\"$$STATEMACHINEEDITOR_VERSION\" compatVersion=\"$$STATEMACHINEEDITOR_VERSION\">
+  <vendor>ifak</vendor>
+  <copyright>(C) ifak </copyright>
+  <license>LGPL</license>
+  <description>statemachine editor plugin</description>
+  <url></url>
+  <dependencyList>
+    <dependency name=\"dsleditor\" version=\"$$DSLEDITOR_VERSION\"/>
+  </dependencyList>
+</plugin>
+
