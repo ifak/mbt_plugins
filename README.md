@@ -1,12 +1,12 @@
 # Mbt Plugins 
 
-[[![License](https://img.shields.io/badge/license-LGPLv3-blue.svg)](https://github.com/ifak/mbt_plugins/blob/master/LICENSE)
+[![License](https://img.shields.io/badge/license-LGPLv3-blue.svg)](https://github.com/ifak/mbt_plugins/blob/master/LICENSE)
 
 **Mbt (Model Based Testing) Plugins** is a library of GUI editors for creation of specification models as part of the [Mbt Creator](https://github.com/ifak/mbtcreator).
 
 ## Authors and major contributors
 - [ifak] (https://www.ifak.eu)
-Institut für Automation und Kommunikation - Mobata project lead
+Institut für Automation und Kommunikation - Mbt Plugins project lead
 - [...]
 
 ## Prerequisites
