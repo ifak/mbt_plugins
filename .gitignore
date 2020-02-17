@@ -25,6 +25,8 @@
 *.la
 *.a
 *.lib
+
+# Generated Headers
 *.tlh
 
 # Executables
