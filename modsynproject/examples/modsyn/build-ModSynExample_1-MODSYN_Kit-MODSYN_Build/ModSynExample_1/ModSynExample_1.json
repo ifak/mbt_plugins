@@ -1,0 +1,479 @@
+{
+    "attributes": [
+        {
+            "dataType": "int",
+            "initValue": "0",
+            "name": "globalAttribute",
+            "uuid": "{e4fac2cf-0977-4275-904b-8f39642a74dc}"
+        },
+        {
+            "dataType": "int",
+            "initValue": "0",
+            "name": "retValue",
+            "uuid": "{74ca155a-03a1-4f41-ac32-938de893a692}"
+        },
+        {
+            "dataType": "int",
+            "initValue": "0",
+            "name": "decl_attr_1",
+            "uuid": "{347bd72d-15de-4407-a4ba-56b07cde4719}"
+        },
+        {
+            "dataType": "int",
+            "initValue": "0",
+            "name": "decl_attr_2",
+            "uuid": "{fcd15652-ccc7-472c-8537-680b6dfd21a4}"
+        }
+    ],
+    "components": [
+        {
+            "attributes": [
+            ],
+            "compType": "ComponentType",
+            "defaultPort": "{224ef079-3156-4fc3-9f2b-305f3b22cfe5}",
+            "name": "user",
+            "ports": [
+                {
+                    "name": "_defaultPort",
+                    "uuid": "{224ef079-3156-4fc3-9f2b-305f3b22cfe5}"
+                }
+            ],
+            "uuid": "{8bf8438b-4865-4b71-be60-96ad5191552b}"
+        },
+        {
+            "attributes": [
+                {
+                    "dataType": "bool",
+                    "initValue": "false",
+                    "name": "initialized",
+                    "uuid": "{53f3ec06-27ea-4c8d-8e4a-48de66c484ea}"
+                }
+            ],
+            "compType": "ComponentType",
+            "defaultPort": "{c562c183-9edb-49fb-82c4-dd7e5d424d50}",
+            "name": "system",
+            "ports": [
+                {
+                    "name": "_defaultPort",
+                    "uuid": "{c562c183-9edb-49fb-82c4-dd7e5d424d50}"
+                }
+            ],
+            "uuid": "{b7997eb4-27c6-432e-8621-b0f40d008088}"
+        }
+    ],
+    "dataTypes": [
+        {
+            "name": "int",
+            "uuid": "{0c9c0f98-f738-4879-8443-50df1ca8e73c}"
+        },
+        {
+            "name": "real",
+            "uuid": "{cc7b7d5a-868a-4a75-a43a-59d9aec27ed3}"
+        },
+        {
+            "name": "bool",
+            "uuid": "{fe33aa1a-3fbf-464f-afc7-d1a3e04abe6c}"
+        },
+        {
+            "name": "string",
+            "uuid": "{8f014468-5843-4526-9c02-fe9c6569d7fd}"
+        },
+        {
+            "name": "myEnum",
+            "uuid": "{a18714f4-83c2-443a-a81b-a408547e5cfb}"
+        }
+    ],
+    "name": "requirements_model",
+    "sequences": [
+        {
+            "name": "Anlage_Stop",
+            "steps": [
+                {
+                    "component": "{8bf8438b-4865-4b71-be60-96ad5191552b}",
+                    "statement": "Init",
+                    "stepType": "StatementStep",
+                    "uuid": "{3a2b10d2-f036-4649-a1c7-24834d15a031}"
+                },
+                {
+                    "paramValues": [
+                        {
+                            "param": "Gesamtanlage_Start",
+                            "uuid": "{ec57802e-1d62-41ae-be3a-5f02df4531b7}",
+                            "value": true
+                        }
+                    ],
+                    "referenceId": "{a0a79704-928c-4d55-a952-89fd9e5696ae}",
+                    "signal": "{7f12ea32-5c47-4202-b6c3-d4cb705b5efe}",
+                    "sourcePort": "{224ef079-3156-4fc3-9f2b-305f3b22cfe5}",
+                    "stepType": "MessageStep",
+                    "targetPort": "{c562c183-9edb-49fb-82c4-dd7e5d424d50}",
+                    "text": "setButtonFM()",
+                    "uuid": "{469c5fff-3523-4a74-b6ae-4c7ab0b90eb3}"
+                },
+                {
+                    "component": "{8bf8438b-4865-4b71-be60-96ad5191552b}",
+                    "statement": "Auto",
+                    "stepType": "StatementStep",
+                    "uuid": "{9f51ad63-3697-43eb-a9ec-695bece48c6c}"
+                },
+                {
+                    "component": "{b7997eb4-27c6-432e-8621-b0f40d008088}",
+                    "statement": "Auto",
+                    "stepType": "StatementStep",
+                    "uuid": "{f99894c0-70e2-4d2f-be73-2fa4fcbd91e8}"
+                },
+                {
+                    "guard": "msg._Active == 1 and msg.timer == 30",
+                    "referenceId": "{bccb85e7-f389-463b-9cf9-7da0eba51dcd}",
+                    "signal": "{4f1a150b-bb57-4c4d-b8ba-70316997e943}",
+                    "sourcePort": "{224ef079-3156-4fc3-9f2b-305f3b22cfe5}",
+                    "stepType": "CheckMessageStep",
+                    "targetPort": "{c562c183-9edb-49fb-82c4-dd7e5d424d50}",
+                    "text": "checkByteValue_ActiveStep()[msg._Active == 1 and msg.timer == 30] after 30000 ms",
+                    "uuid": "{f9132649-3313-4293-aebf-60ee72b3356c}"
+                },
+                {
+                    "component": "{b7997eb4-27c6-432e-8621-b0f40d008088}",
+                    "name": "defaultTimer",
+                    "stepType": "TimerStep",
+                    "uuid": "{19a15f26-c096-4a6b-ab7f-c277b487ce06}",
+                    "value": 500
+                },
+                {
+                    "framentType": "sequ",
+                    "regions": [
+                        {
+                            "condition": "globalAttribute<10",
+                            "name": "globalAttribute<10",
+                            "steps": [
+                                {
+                                    "guard": "msg.Quittierung == true",
+                                    "referenceId": "{13b702c3-4c69-4614-b454-cd77ec1aad42}",
+                                    "signal": "{4b3a3f76-dad7-402f-9ced-2aceba8c0670}",
+                                    "sourcePort": "{224ef079-3156-4fc3-9f2b-305f3b22cfe5}",
+                                    "stepType": "CheckMessageStep",
+                                    "targetPort": "{c562c183-9edb-49fb-82c4-dd7e5d424d50}",
+                                    "text": "setButtonFM_Quit()[msg.Quittierung == true]",
+                                    "uuid": "{8e950aa6-1378-4ad1-b177-459708bdbf29}"
+                                }
+                            ],
+                            "uuid": "{0750a6d7-e80b-43a0-93cd-ab7366961606}"
+                        },
+                        {
+                            "condition": "globalAttribute>10",
+                            "name": "globalAttribute>10",
+                            "steps": [
+                                {
+                                    "paramValues": [
+                                        {
+                                            "param": "Gesamtanlage_Start",
+                                            "uuid": "{04171005-cab1-41d1-85eb-97351722647f}",
+                                            "value": true
+                                        }
+                                    ],
+                                    "referenceId": "{aeace0ac-5732-4d31-8619-2895e0876613}",
+                                    "signal": "{7f12ea32-5c47-4202-b6c3-d4cb705b5efe}",
+                                    "sourcePort": "{224ef079-3156-4fc3-9f2b-305f3b22cfe5}",
+                                    "stepType": "MessageStep",
+                                    "targetPort": "{c562c183-9edb-49fb-82c4-dd7e5d424d50}",
+                                    "text": "setButtonFM()",
+                                    "uuid": "{954faca5-f112-499d-a5e9-834dacb106da}"
+                                }
+                            ],
+                            "uuid": "{2fb30643-7b25-4c66-8566-0f5b377a6c1b}"
+                        },
+                        {
+                            "condition": "defaultTimer.timeout()",
+                            "name": "defaultTimer.timeout()",
+                            "uuid": "{2e268dde-23bc-43e3-aca9-3cb4b0f934c2}"
+                        }
+                    ],
+                    "stepType": "FragmentStep",
+                    "uuid": "{114816f0-397e-4d26-8243-9aaad5b8538e}"
+                },
+                {
+                    "framentType": "sequ",
+                    "regions": [
+                        {
+                            "condition": "globalAttribute<10",
+                            "name": "globalAttribute<10",
+                            "steps": [
+                                {
+                                    "guard": "true",
+                                    "referenceId": "{9390b9e0-edc7-41a2-9fe0-edd52d790929}",
+                                    "signal": "{4b3a3f76-dad7-402f-9ced-2aceba8c0670}",
+                                    "sourcePort": "{224ef079-3156-4fc3-9f2b-305f3b22cfe5}",
+                                    "stepType": "CheckMessageStep",
+                                    "targetPort": "{c562c183-9edb-49fb-82c4-dd7e5d424d50}",
+                                    "text": "setButtonFM_Quit()[true]",
+                                    "uuid": "{6dc3904c-eff4-4017-9cb2-100700a81987}"
+                                }
+                            ],
+                            "uuid": "{d1503d73-7d00-493a-a0bf-8335209af86e}"
+                        },
+                        {
+                            "condition": "globalAttribute>10",
+                            "name": "globalAttribute>10",
+                            "steps": [
+                                {
+                                    "paramValues": [
+                                        {
+                                            "param": "Gesamtanlage_Start",
+                                            "uuid": "{6e844a07-5c8c-4d67-9c84-00e5819049da}",
+                                            "value": true
+                                        }
+                                    ],
+                                    "referenceId": "{9e1d3881-aabc-48a1-8f4d-f05a122e7f94}",
+                                    "signal": "{7f12ea32-5c47-4202-b6c3-d4cb705b5efe}",
+                                    "sourcePort": "{224ef079-3156-4fc3-9f2b-305f3b22cfe5}",
+                                    "stepType": "MessageStep",
+                                    "targetPort": "{c562c183-9edb-49fb-82c4-dd7e5d424d50}",
+                                    "text": "setButtonFM()",
+                                    "uuid": "{68703bfe-c2dd-402e-b1a9-805cece55660}"
+                                }
+                            ],
+                            "uuid": "{98f3967e-5508-477f-9a50-6a37f1ddd3de}"
+                        }
+                    ],
+                    "stepType": "FragmentStep",
+                    "uuid": "{14856268-6c2d-4184-987e-35aed61f844a}"
+                },
+                {
+                    "framentType": "!unknown!",
+                    "regions": [
+                        {
+                            "condition": "Duration = 30000ms",
+                            "name": "Duration = 30000ms",
+                            "steps": [
+                                {
+                                    "paramValues": [
+                                        {
+                                            "param": "Gesamtanlage_Start",
+                                            "uuid": "{8ae358b6-9c91-4231-91dc-39d55615b0be}",
+                                            "value": true
+                                        }
+                                    ],
+                                    "referenceId": "{0e8d4741-776b-4759-bf44-db1e1f983622}",
+                                    "signal": "{7f12ea32-5c47-4202-b6c3-d4cb705b5efe}",
+                                    "sourcePort": "{224ef079-3156-4fc3-9f2b-305f3b22cfe5}",
+                                    "stepType": "MessageStep",
+                                    "targetPort": "{c562c183-9edb-49fb-82c4-dd7e5d424d50}",
+                                    "text": "setButtonFM()",
+                                    "uuid": "{7ab893ce-f412-4766-87c6-46810c4e21f3}"
+                                },
+                                {
+                                    "component": "{b7997eb4-27c6-432e-8621-b0f40d008088}",
+                                    "statement": "Auto",
+                                    "stepType": "StatementStep",
+                                    "uuid": "{d4d99430-0830-403b-8690-17f86d8fd362}"
+                                },
+                                {
+                                    "guard": "msg._Active == 1 and msg.timer == 30",
+                                    "referenceId": "{9e9f0182-fd29-48f0-ade3-52bfcb46f00a}",
+                                    "signal": "{4f1a150b-bb57-4c4d-b8ba-70316997e943}",
+                                    "sourcePort": "{224ef079-3156-4fc3-9f2b-305f3b22cfe5}",
+                                    "stepType": "CheckMessageStep",
+                                    "targetPort": "{c562c183-9edb-49fb-82c4-dd7e5d424d50}",
+                                    "text": "checkByteValue_ActiveStep()[msg._Active == 1 and msg.timer == 30]",
+                                    "uuid": "{f55f938d-cdff-42bf-9494-56e8dc394fa2}"
+                                }
+                            ],
+                            "uuid": "{e867cd4d-8547-4490-880b-43c383bcabc1}"
+                        }
+                    ],
+                    "stepType": "FragmentStep",
+                    "uuid": "{a571a8b5-54aa-4ca8-b3f8-7ddb0f77f57e}"
+                }
+            ],
+            "uuid": "{b2b42728-2d88-4fa2-8391-5c31c55153b5}"
+        },
+        {
+            "name": "Gutverhalten",
+            "steps": [
+                {
+                    "component": "{8bf8438b-4865-4b71-be60-96ad5191552b}",
+                    "statement": "Init",
+                    "stepType": "StatementStep",
+                    "uuid": "{e3e0e290-2215-435e-88a2-6376f81b7ed7}"
+                },
+                {
+                    "paramValues": [
+                        {
+                            "param": "Gesamtanlage_Start",
+                            "uuid": "{9633afca-41ea-484e-8d8c-61a3b368e718}",
+                            "value": true
+                        }
+                    ],
+                    "referenceId": "{76ee61f1-8739-420b-b882-2d840ca0cb64}",
+                    "signal": "{7f12ea32-5c47-4202-b6c3-d4cb705b5efe}",
+                    "sourcePort": "{224ef079-3156-4fc3-9f2b-305f3b22cfe5}",
+                    "stepType": "MessageStep",
+                    "targetPort": "{c562c183-9edb-49fb-82c4-dd7e5d424d50}",
+                    "text": "setButtonFM()",
+                    "uuid": "{538c6e12-4321-4200-a9e0-d62b1d01d48d}"
+                },
+                {
+                    "component": "{b7997eb4-27c6-432e-8621-b0f40d008088}",
+                    "statement": "Auto",
+                    "stepType": "StatementStep",
+                    "uuid": "{18a7d0fb-dfd8-46fc-859e-a285ddb3e524}"
+                },
+                {
+                    "component": "{8bf8438b-4865-4b71-be60-96ad5191552b}",
+                    "statement": "Auto",
+                    "stepType": "StatementStep",
+                    "uuid": "{c57d5b26-04a0-4501-b0da-aba6830c72c1}"
+                },
+                {
+                    "guard": "msg._Active == 1 and msg.timer == 30",
+                    "referenceId": "{54f83fef-cece-432c-80d7-7e231b0637db}",
+                    "signal": "{4f1a150b-bb57-4c4d-b8ba-70316997e943}",
+                    "sourcePort": "{224ef079-3156-4fc3-9f2b-305f3b22cfe5}",
+                    "stepType": "CheckMessageStep",
+                    "targetPort": "{c562c183-9edb-49fb-82c4-dd7e5d424d50}",
+                    "text": "checkByteValue_ActiveStep()[msg._Active == 1 and msg.timer == 30] after 30000 ms",
+                    "uuid": "{9920e805-04fc-4b9e-a0d4-e98c19cdc661}"
+                }
+            ],
+            "uuid": "{2d6ced69-975a-47f9-ba30-a438a2625de4}"
+        }
+    ],
+    "signals": [
+        {
+            "name": "setButtonFM_Quit",
+            "params": [
+                {
+                    "dataType": "bool",
+                    "name": "Quittierung",
+                    "uuid": "{9be6baed-1ae2-4abf-a779-c9f232055ce2}"
+                }
+            ],
+            "uuid": "{4b3a3f76-dad7-402f-9ced-2aceba8c0670}"
+        },
+        {
+            "name": "setButton",
+            "params": [
+                {
+                    "dataType": "string",
+                    "name": "name",
+                    "uuid": "{2d947a77-a78a-4f49-bdb3-2cb50f643d96}"
+                },
+                {
+                    "dataType": "bool",
+                    "name": "bValue",
+                    "uuid": "{351b3d89-470f-49f8-b674-2f5250b84adc}"
+                }
+            ],
+            "uuid": "{8d0d0f2a-88eb-4863-8892-c55464a4a81b}"
+        },
+        {
+            "name": "setStop",
+            "params": [
+                {
+                    "dataType": "bool",
+                    "name": "bValue",
+                    "uuid": "{5c7f5bee-f48b-4597-870a-753037f74791}"
+                }
+            ],
+            "uuid": "{d3586179-3dc6-4e2c-9c96-d55b8d8e4e8f}"
+        },
+        {
+            "name": "confirmation",
+            "params": [
+                {
+                    "dataType": "bool",
+                    "name": "bValue",
+                    "uuid": "{88d34686-dd87-44f0-ae83-51923a1268a2}"
+                }
+            ],
+            "uuid": "{abaa5cb8-2e5a-4290-858c-a8f631580f38}"
+        },
+        {
+            "name": "setStart",
+            "params": [
+                {
+                    "dataType": "bool",
+                    "name": "bValue",
+                    "uuid": "{88c2959e-7145-4311-9b8c-c035c512d7ec}"
+                }
+            ],
+            "uuid": "{a65d107d-8541-4394-a409-eb18d6dac18b}"
+        },
+        {
+            "name": "sendResponse",
+            "params": [
+                {
+                    "dataType": "int",
+                    "name": "retValue",
+                    "uuid": "{2800fc35-04c1-4df4-90f2-2c6f4c72adbe}"
+                }
+            ],
+            "uuid": "{bb913d40-677b-443a-b056-75e8c888d220}"
+        },
+        {
+            "name": "sendResponseBool",
+            "params": [
+                {
+                    "dataType": "string",
+                    "name": "name",
+                    "uuid": "{915af002-2806-4457-9a93-dd6631a81e02}"
+                },
+                {
+                    "dataType": "bool",
+                    "name": "bValue",
+                    "uuid": "{86c78060-85ed-4d51-9064-9e9bcb708be9}"
+                }
+            ],
+            "uuid": "{619a7543-374a-49f7-9c6f-2d134d3ba7c1}"
+        },
+        {
+            "name": "decl_input",
+            "params": [
+                {
+                    "dataType": "int",
+                    "name": "in",
+                    "uuid": "{6d992aee-a083-472c-bd82-0fc126aa2477}"
+                }
+            ],
+            "uuid": "{c47131be-1c05-4c8c-8d0c-fdb26da9726e}"
+        },
+        {
+            "name": "decl_output",
+            "params": [
+                {
+                    "dataType": "int",
+                    "name": "out",
+                    "uuid": "{41a59eec-6d04-4c08-a105-28e6285c2d80}"
+                }
+            ],
+            "uuid": "{0bed699c-59a4-4491-b1fb-923a9afd230a}"
+        },
+        {
+            "name": "setButtonFM",
+            "params": [
+                {
+                    "dataType": "bool",
+                    "name": "Gesamtanlage_Start",
+                    "uuid": "{04c0a4ca-ca1b-441d-9d10-dfff9b39183a}"
+                }
+            ],
+            "uuid": "{7f12ea32-5c47-4202-b6c3-d4cb705b5efe}"
+        },
+        {
+            "name": "checkByteValue_ActiveStep",
+            "params": [
+                {
+                    "dataType": "int",
+                    "name": "_Active",
+                    "uuid": "{8ddb64ba-3aa2-429e-ac40-a77f8112ba45}"
+                },
+                {
+                    "dataType": "int",
+                    "name": "timer",
+                    "uuid": "{12d38fe4-e484-4319-a1f5-fabaf9367661}"
+                }
+            ],
+            "uuid": "{4f1a150b-bb57-4c4d-b8ba-70316997e943}"
+        }
+    ]
+}

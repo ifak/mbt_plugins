@@ -1,0 +1,381 @@
+{
+    "attributes": [
+        {
+            "dataType": "int",
+            "initValue": "0",
+            "name": "attr_1",
+            "uuid": "{fd575702-6ab0-4ec7-b981-63f25938029c}"
+        },
+        {
+            "dataType": "int",
+            "initValue": "100",
+            "name": "attr_2",
+            "uuid": "{59697bf2-b1dc-48ee-8d55-84ad5f82ec6e}"
+        }
+    ],
+    "components": [
+        {
+            "attributes": [
+            ],
+            "compType": "ComponentType",
+            "defaultPort": "{48032642-2c16-449c-a545-8fe4a190a92d}",
+            "name": "user",
+            "ports": [
+                {
+                    "name": "_defaultPort",
+                    "uuid": "{48032642-2c16-449c-a545-8fe4a190a92d}"
+                }
+            ],
+            "uuid": "{d0e8f56f-f3f5-4e95-933d-364d8988edf4}"
+        },
+        {
+            "attributes": [
+                {
+                    "dataType": "bool",
+                    "initValue": "false",
+                    "name": "initialized",
+                    "uuid": "{0edd7b32-db49-4fe6-81e3-538bb79ff4e6}"
+                }
+            ],
+            "compType": "ComponentType",
+            "defaultPort": "{e36d8f37-10d2-488d-b5e4-a3fc2b8d7229}",
+            "name": "system",
+            "ports": [
+                {
+                    "name": "_defaultPort",
+                    "uuid": "{e36d8f37-10d2-488d-b5e4-a3fc2b8d7229}"
+                }
+            ],
+            "uuid": "{a13f4cbb-2754-4fdf-80c6-ac559615ff8a}"
+        }
+    ],
+    "dataTypes": [
+        {
+            "name": "int",
+            "uuid": "{acc2799a-e61c-4ca5-bf83-2550f8b7cb42}"
+        },
+        {
+            "name": "real",
+            "uuid": "{b9391120-d514-4759-b82c-b2fd5e45585f}"
+        },
+        {
+            "name": "bool",
+            "uuid": "{2f06121f-8a7a-49e5-befb-f0e42dcfcebe}"
+        }
+    ],
+    "name": "requirements_model",
+    "sequences": [
+        {
+            "name": "Ausfahren",
+            "steps": [
+                {
+                    "component": "{d0e8f56f-f3f5-4e95-933d-364d8988edf4}",
+                    "statement": "init",
+                    "stepType": "StatementStep",
+                    "uuid": "{df625ef1-bf2d-49eb-b50b-6daeb8800c82}"
+                },
+                {
+                    "component": "{a13f4cbb-2754-4fdf-80c6-ac559615ff8a}",
+                    "statement": "init",
+                    "stepType": "StatementStep",
+                    "uuid": "{6f852459-f056-4e0b-bb40-b23531df0114}"
+                },
+                {
+                    "referenceId": "{ee574650-3efc-4129-9f22-16e087839dab}",
+                    "signal": "{82c0c316-c7aa-47ec-a182-b567b5000871}",
+                    "sourcePort": "{48032642-2c16-449c-a545-8fe4a190a92d}",
+                    "stepType": "MessageStep",
+                    "targetPort": "{e36d8f37-10d2-488d-b5e4-a3fc2b8d7229}",
+                    "text": "Z1_ausfahren()",
+                    "uuid": "{c6b36a84-c57f-48fc-947c-88981234e6fc}"
+                },
+                {
+                    "referenceId": "{5ee97e25-a698-404c-a456-8216d3c951fb}",
+                    "signal": "{0f707d63-b46a-4b67-bb2b-2b5222b1cbd6}",
+                    "sourcePort": "{e36d8f37-10d2-488d-b5e4-a3fc2b8d7229}",
+                    "stepType": "MessageStep",
+                    "targetPort": "{48032642-2c16-449c-a545-8fe4a190a92d}",
+                    "text": "Z1_ausgefahren()",
+                    "uuid": "{5e00c49f-9757-4334-ac3c-12ada4c8e909}"
+                },
+                {
+                    "component": "{a13f4cbb-2754-4fdf-80c6-ac559615ff8a}",
+                    "statement": "Z1_ausgefahren",
+                    "stepType": "StatementStep",
+                    "uuid": "{03b84d24-e631-41eb-a55a-5813abde18fd}"
+                },
+                {
+                    "referenceId": "{c5f4a969-5fc9-467f-b73b-353cc7245b2e}",
+                    "signal": "{4d7ba64a-7305-4e7a-a659-a4a82e8ed631}",
+                    "sourcePort": "{48032642-2c16-449c-a545-8fe4a190a92d}",
+                    "stepType": "MessageStep",
+                    "targetPort": "{e36d8f37-10d2-488d-b5e4-a3fc2b8d7229}",
+                    "text": "Z2_ausfahren()",
+                    "uuid": "{4dadf813-4fc4-4cc3-a741-3c68af0b9b51}"
+                },
+                {
+                    "referenceId": "{bf5d0462-700d-4a15-82cb-8da6a9007a01}",
+                    "signal": "{bf41e47e-7c0b-4de1-a2f6-5cd0ff099e85}",
+                    "sourcePort": "{e36d8f37-10d2-488d-b5e4-a3fc2b8d7229}",
+                    "stepType": "MessageStep",
+                    "targetPort": "{48032642-2c16-449c-a545-8fe4a190a92d}",
+                    "text": "Z2_ausgefahren()",
+                    "uuid": "{6dde6a27-a367-4837-b41d-f218b44df321}"
+                },
+                {
+                    "component": "{a13f4cbb-2754-4fdf-80c6-ac559615ff8a}",
+                    "statement": "Z2_ausgefahren",
+                    "stepType": "StatementStep",
+                    "uuid": "{1bc95c4d-1349-4081-85fb-a8392c4e1a50}"
+                },
+                {
+                    "referenceId": "{31383c49-6de8-4feb-bd54-4276a01a0823}",
+                    "signal": "{bf4386aa-c43d-480c-8d6d-63769c706763}",
+                    "sourcePort": "{48032642-2c16-449c-a545-8fe4a190a92d}",
+                    "stepType": "MessageStep",
+                    "targetPort": "{e36d8f37-10d2-488d-b5e4-a3fc2b8d7229}",
+                    "text": "Z3_ausfahren()",
+                    "uuid": "{0054ab9e-0839-4c40-a37a-991b6ff54944}"
+                },
+                {
+                    "referenceId": "{280256e7-c200-4010-a1a6-c194ed622ebd}",
+                    "signal": "{6ca3a60e-c8de-49a3-afd6-390dc4167c54}",
+                    "sourcePort": "{e36d8f37-10d2-488d-b5e4-a3fc2b8d7229}",
+                    "stepType": "MessageStep",
+                    "targetPort": "{48032642-2c16-449c-a545-8fe4a190a92d}",
+                    "text": "Z3_ausgefahren()",
+                    "uuid": "{31830040-d512-47f7-8b3d-717b69426432}"
+                },
+                {
+                    "component": "{d0e8f56f-f3f5-4e95-933d-364d8988edf4}",
+                    "statement": "end",
+                    "stepType": "StatementStep",
+                    "uuid": "{e3ec571c-1612-45b1-ba45-b5eae2f7250e}"
+                },
+                {
+                    "component": "{a13f4cbb-2754-4fdf-80c6-ac559615ff8a}",
+                    "statement": "end",
+                    "stepType": "StatementStep",
+                    "uuid": "{21a33752-9f7b-45ec-8c1a-e25e27d52478}"
+                }
+            ],
+            "uuid": "{7be71a01-88c7-4ed2-ade8-5bd1bc9c421b}"
+        },
+        {
+            "name": "Einfahren",
+            "steps": [
+                {
+                    "component": "{d0e8f56f-f3f5-4e95-933d-364d8988edf4}",
+                    "statement": "end",
+                    "stepType": "StatementStep",
+                    "uuid": "{d8cc9062-254e-4830-920f-69d626a22be2}"
+                },
+                {
+                    "component": "{a13f4cbb-2754-4fdf-80c6-ac559615ff8a}",
+                    "statement": "end",
+                    "stepType": "StatementStep",
+                    "uuid": "{c54a9602-f9e1-475a-abf5-3ae03a99d1e2}"
+                },
+                {
+                    "referenceId": "{a184c801-c9ae-4a4c-86fe-b4d9b008fc85}",
+                    "signal": "{6a2f5b31-7782-4326-bd67-be16269902ff}",
+                    "sourcePort": "{48032642-2c16-449c-a545-8fe4a190a92d}",
+                    "stepType": "MessageStep",
+                    "targetPort": "{e36d8f37-10d2-488d-b5e4-a3fc2b8d7229}",
+                    "text": "Z3_zurueckfahren()",
+                    "uuid": "{6172e5c6-74f8-4519-b2a1-15b40ad723ac}"
+                },
+                {
+                    "referenceId": "{1745936b-b1fe-40ed-a444-f7dd33d1a117}",
+                    "signal": "{63d19ef1-0c9d-4341-94c6-8f86ca9961be}",
+                    "sourcePort": "{e36d8f37-10d2-488d-b5e4-a3fc2b8d7229}",
+                    "stepType": "MessageStep",
+                    "targetPort": "{48032642-2c16-449c-a545-8fe4a190a92d}",
+                    "text": "Z3_zurueckgefahren()",
+                    "uuid": "{91cc6217-ac8a-4644-b7f2-94838a2c07f5}"
+                },
+                {
+                    "component": "{a13f4cbb-2754-4fdf-80c6-ac559615ff8a}",
+                    "statement": "Z2_ausgefahren",
+                    "stepType": "StatementStep",
+                    "uuid": "{3f9edf05-60ec-4c36-a13e-47c3bc846399}"
+                },
+                {
+                    "referenceId": "{f3c0a5e9-a723-44eb-9ce2-4a280c36b465}",
+                    "signal": "{1ee432cb-5da6-45f9-a38a-0e94cbee9af7}",
+                    "sourcePort": "{48032642-2c16-449c-a545-8fe4a190a92d}",
+                    "stepType": "MessageStep",
+                    "targetPort": "{e36d8f37-10d2-488d-b5e4-a3fc2b8d7229}",
+                    "text": "Z2_zurueckfahren()",
+                    "uuid": "{1149b4f5-4088-495c-9e05-cf1c91b84c05}"
+                },
+                {
+                    "referenceId": "{a9f16f18-d906-48a2-9eca-2f53a84abc32}",
+                    "signal": "{84bb062d-40b9-4221-8af5-f421dd4254a4}",
+                    "sourcePort": "{e36d8f37-10d2-488d-b5e4-a3fc2b8d7229}",
+                    "stepType": "MessageStep",
+                    "targetPort": "{48032642-2c16-449c-a545-8fe4a190a92d}",
+                    "text": "Z2_zurueckgefahren()",
+                    "uuid": "{ff6a11de-b3ce-4f4b-9740-ed7bf078f9a9}"
+                },
+                {
+                    "component": "{a13f4cbb-2754-4fdf-80c6-ac559615ff8a}",
+                    "statement": "Z1_ausgefahren",
+                    "stepType": "StatementStep",
+                    "uuid": "{2b4ecc13-33a8-4ec7-90dc-c394964202ff}"
+                },
+                {
+                    "referenceId": "{d9e381c6-0fdd-4bae-814c-ebd77870fba2}",
+                    "signal": "{ec16b073-8077-4c3a-b626-78097472febd}",
+                    "sourcePort": "{48032642-2c16-449c-a545-8fe4a190a92d}",
+                    "stepType": "MessageStep",
+                    "targetPort": "{e36d8f37-10d2-488d-b5e4-a3fc2b8d7229}",
+                    "text": "Z1_zurueckfahren()",
+                    "uuid": "{e42e6848-e79e-49a1-8941-44d1b2a22c56}"
+                },
+                {
+                    "referenceId": "{e90b3294-9a7d-4b8f-9b0e-8452b36bb7de}",
+                    "signal": "{c3a67625-973b-4e98-8257-1bff342411c6}",
+                    "sourcePort": "{e36d8f37-10d2-488d-b5e4-a3fc2b8d7229}",
+                    "stepType": "MessageStep",
+                    "targetPort": "{48032642-2c16-449c-a545-8fe4a190a92d}",
+                    "text": "Z1_zurueckgefahren()",
+                    "uuid": "{9d34af94-e028-47b1-8274-082d651f4f79}"
+                },
+                {
+                    "component": "{a13f4cbb-2754-4fdf-80c6-ac559615ff8a}",
+                    "statement": "init",
+                    "stepType": "StatementStep",
+                    "uuid": "{dae2c7f0-396a-47c9-828f-25e304bc5355}"
+                }
+            ],
+            "uuid": "{cebcf2f6-a195-44cd-8b6b-d2c652a934c6}"
+        },
+        {
+            "name": "Nothalt",
+            "steps": [
+                {
+                    "component": "{d0e8f56f-f3f5-4e95-933d-364d8988edf4}",
+                    "statement": "init",
+                    "stepType": "StatementStep",
+                    "uuid": "{12c725b1-b503-440b-95a4-68b0e717a9b2}"
+                },
+                {
+                    "component": "{a13f4cbb-2754-4fdf-80c6-ac559615ff8a}",
+                    "statement": "init",
+                    "stepType": "StatementStep",
+                    "uuid": "{76b13e62-ba12-431a-ade7-32374624fb9e}"
+                },
+                {
+                    "referenceId": "{8de8dd6c-fcc3-4d72-862b-34855949e7ab}",
+                    "signal": "{129837fe-5af7-448f-952e-29cb2c358479}",
+                    "sourcePort": "{48032642-2c16-449c-a545-8fe4a190a92d}",
+                    "stepType": "MessageStep",
+                    "targetPort": "{e36d8f37-10d2-488d-b5e4-a3fc2b8d7229}",
+                    "text": "Nothalt_set()",
+                    "uuid": "{af01001a-3394-45c3-b4dd-98e56674f343}"
+                },
+                {
+                    "referenceId": "{004c1cde-df13-4911-b362-72b17f0549fe}",
+                    "signal": "{2b41616b-cab0-46e5-b3ca-f79715b02106}",
+                    "sourcePort": "{e36d8f37-10d2-488d-b5e4-a3fc2b8d7229}",
+                    "stepType": "MessageStep",
+                    "targetPort": "{48032642-2c16-449c-a545-8fe4a190a92d}",
+                    "text": "Station_gestoppt()",
+                    "uuid": "{07a7bf6f-9a43-4d2a-a277-9e6d7c1e5811}"
+                },
+                {
+                    "referenceId": "{7c3b88f2-009e-469a-bce1-5c739324fea5}",
+                    "signal": "{b94d8b5e-2656-4564-885b-e0bb1a82a618}",
+                    "sourcePort": "{48032642-2c16-449c-a545-8fe4a190a92d}",
+                    "stepType": "MessageStep",
+                    "targetPort": "{e36d8f37-10d2-488d-b5e4-a3fc2b8d7229}",
+                    "text": "Nothalt_reset()",
+                    "uuid": "{43282df7-8719-45e5-a8aa-318fc7250c4a}"
+                },
+                {
+                    "referenceId": "{e8deda46-ae47-412b-a054-a45ff120da4c}",
+                    "signal": "{48481443-8989-490b-8afc-6b7e5f7654e1}",
+                    "sourcePort": "{48032642-2c16-449c-a545-8fe4a190a92d}",
+                    "stepType": "MessageStep",
+                    "targetPort": "{e36d8f37-10d2-488d-b5e4-a3fc2b8d7229}",
+                    "text": "Nothalt_quit()",
+                    "uuid": "{f8edac0d-0efb-43f2-8a5c-3439055028fe}"
+                },
+                {
+                    "component": "{a13f4cbb-2754-4fdf-80c6-ac559615ff8a}",
+                    "statement": "init",
+                    "stepType": "StatementStep",
+                    "uuid": "{444dd95e-6eb8-4d63-b3ec-4a54c46ae797}"
+                }
+            ],
+            "uuid": "{1126e78e-07df-4e52-94de-a47e582dde3a}"
+        }
+    ],
+    "signals": [
+        {
+            "name": "Z1_ausfahren",
+            "uuid": "{82c0c316-c7aa-47ec-a182-b567b5000871}"
+        },
+        {
+            "name": "Z1_ausgefahren",
+            "uuid": "{0f707d63-b46a-4b67-bb2b-2b5222b1cbd6}"
+        },
+        {
+            "name": "Z2_ausfahren",
+            "uuid": "{4d7ba64a-7305-4e7a-a659-a4a82e8ed631}"
+        },
+        {
+            "name": "Z2_ausgefahren",
+            "uuid": "{bf41e47e-7c0b-4de1-a2f6-5cd0ff099e85}"
+        },
+        {
+            "name": "Z3_ausfahren",
+            "uuid": "{bf4386aa-c43d-480c-8d6d-63769c706763}"
+        },
+        {
+            "name": "Z3_ausgefahren",
+            "uuid": "{6ca3a60e-c8de-49a3-afd6-390dc4167c54}"
+        },
+        {
+            "name": "Z1_zurueckfahren",
+            "uuid": "{ec16b073-8077-4c3a-b626-78097472febd}"
+        },
+        {
+            "name": "Z1_zurueckgefahren",
+            "uuid": "{c3a67625-973b-4e98-8257-1bff342411c6}"
+        },
+        {
+            "name": "Z2_zurueckfahren",
+            "uuid": "{1ee432cb-5da6-45f9-a38a-0e94cbee9af7}"
+        },
+        {
+            "name": "Z2_zurueckgefahren",
+            "uuid": "{84bb062d-40b9-4221-8af5-f421dd4254a4}"
+        },
+        {
+            "name": "Z3_zurueckfahren",
+            "uuid": "{6a2f5b31-7782-4326-bd67-be16269902ff}"
+        },
+        {
+            "name": "Z3_zurueckgefahren",
+            "uuid": "{63d19ef1-0c9d-4341-94c6-8f86ca9961be}"
+        },
+        {
+            "name": "Nothalt_set",
+            "uuid": "{129837fe-5af7-448f-952e-29cb2c358479}"
+        },
+        {
+            "name": "Station_gestoppt",
+            "uuid": "{2b41616b-cab0-46e5-b3ca-f79715b02106}"
+        },
+        {
+            "name": "Nothalt_reset",
+            "uuid": "{b94d8b5e-2656-4564-885b-e0bb1a82a618}"
+        },
+        {
+            "name": "Nothalt_quit",
+            "uuid": "{48481443-8989-490b-8afc-6b7e5f7654e1}"
+        }
+    ]
+}
