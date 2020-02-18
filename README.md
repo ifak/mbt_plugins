@@ -19,7 +19,7 @@ Please follow these steps to contribute to mbt_plugins:
 3. Create a pull request including your change
 
 ## License
-Mbt Plugins is open source software licensed under the [LGPLv3](https://github.com/ifak/mobata/blob/master/LICENSE).
+Mbt Plugins is open source software licensed under the [LGPLv3](https://github.com/ifak/mbt_plugins/blob/master/LICENSE).
 
 
 
